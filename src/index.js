@@ -115,8 +115,8 @@ const Experience = () => {
 const Topic = () => {
   return (
     <div>
-      <h2>Family</h2>
-      <button>Join</button>
+      <h3>Family</h3>
+      <button>Follow</button>
     </div>
   );
 };
