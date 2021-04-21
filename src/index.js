@@ -30,7 +30,7 @@ const Welcome = () => {
   return (
     <section className="col-lg-5 bg-info p-5">
       <h1 className="mt-4 mb-5 text-white font-weight-bold">
-        Share your experiences with the world
+        Share Your Experiences with the World
       </h1>
       <p className="text-white">
         Let us be your voice. Reachout to millions of people that are waiting to
@@ -74,7 +74,7 @@ const TopStories = () => {
 
 const FeaturedExperiences = () => {
   return (
-    <section className="container">
+    <section className="container pb-5">
       <h2 className="my-5 font-weight-bold">Today's featured experiences</h2>
       <div className="row">
         <Experience />
@@ -88,7 +88,7 @@ const FeaturedExperiences = () => {
 
 const Topics = () => {
   return (
-    <section className="container">
+    <section className="container pb-5">
       <h2 className="my-5 font-weight-bold">Follow Topics</h2>
       <div className="row">
         <Topic />
@@ -114,7 +114,7 @@ const Footer = () => {
 const HomeNav = () => {
   return (
     <nav className="d-flex my-5 align-items-center justify-content-between">
-      <a href="#" className="font-weight-bold">
+      <a href="#" className="font-weight-bold fs-3">
         #Tuwaaye
       </a>
       <span className="mx-5 font-weight-bold bg-primary text-white px-4 rounded">
@@ -128,10 +128,12 @@ const TopStory = () => {
   return (
     <div className="col-lg-6">
       <div className="row mb-4">
-        <div className="col-lg-3">Image</div>
+        <div className="col-lg-3">
+          <Image />
+        </div>
         <div className="col-lg-9">
-          <p>How I managed to handle a cheating Husband for 3 years</p>
-          <p>Namusisi Hannah</p>
+          <Title />
+          <Author />
         </div>
       </div>
     </div>
@@ -142,15 +144,14 @@ const Experience = () => {
   return (
     <section className="col-lg-3">
       <div className="mt-4">
-        <div className="bg-light rounded shadow mb-4">Image</div>
+        <div className="bg-light rounded shadow mb-4">
+          <Image />
+        </div>
+        <Title />
         <div className="d-flex justify-content-between align-items-start">
-          <p className="text-center">
-            I have lived to see my mother make it out of depression. It was sad
-            seeing her cry every day that went.
-          </p>
+          <Author />
           <div className="line"></div>
         </div>
-        <p className="text-center">Nahirya Briannah</p>
       </div>
     </section>
   );
@@ -159,15 +160,36 @@ const Experience = () => {
 const Topic = () => {
   return (
     <div className="col-lg-3">
-      <div>Image</div>
-      <h3 className="px-3 py-2 font-weight-bold">
-        Fashion <br />& Branding
-      </h3>
-      <button className="text-white px-4 font-weight-bold btn btn-primary">
-        Follow
-      </button>
+      <Image />
+      <TopicName />
+      <FollowButton />
     </div>
   );
 };
+
+const TopicName = () => (
+  <h3 className="px-3 py-2 font-weight-bold">
+    Fashion <br />& Branding
+  </h3>
+);
+
+const FollowButton = () => (
+  <button className="text-white px-4 font-weight-bold btn btn-primary">
+    Follow
+  </button>
+);
+
+const Image = () => (
+  <img
+    src="https://intense-reaches-16629.herokuapp.com/assets/joanna-nix-walkup-V9QIep1zZJI-unsplash-213dbfa876f61c0b9cb878406e9dc8f7edd49d0b158b910af8adf223f1dbdd77.jpg"
+    alt=""
+  />
+);
+
+const Title = () => (
+  <p>How I managed to handle a cheating Husband for 3 years</p>
+);
+
+const Author = () => <p>Anna Rose</p>;
 
 ReactDOM.render(<Tuwaaye />, document.getElementById("root"));

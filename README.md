@@ -1,5 +1,5 @@
-# Tuwaaye
+# Tuwaaye.
 
 ### React-love
 
-> Reacting my tuwaaye app in reactjs.
+> Recreating my tuwaaye app in React.
