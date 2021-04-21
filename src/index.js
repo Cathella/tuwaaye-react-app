@@ -87,7 +87,9 @@ const TopStories = () => {
 const FeaturedExperiences = () => {
   return (
     <section className="container pb-5">
-      <h2 className="my-5 font-weight-bold">Today's featured experiences</h2>
+      <h2 className="my-5 font-weight-bold pt-5">
+        Today's Featured Experiences
+      </h2>
       <div className="row">
         <Experience />
         <Experience />
@@ -114,9 +116,9 @@ const Topics = () => {
 
 const Footer = () => {
   return (
-    <section className="mt-5 py-4 bg-primary">
+    <section className="mt-5 py-4 bg-deep-purple">
       <div className="container d-flex align-items-center justify-content-center text-white">
-        <div className="mr-5">#Tuwaaye</div>
+        <div className="mr-5 logo">#Tuwaaye</div>
         <span>Copyright © 2021. All Rights Reserved</span>
       </div>
     </section>
@@ -161,12 +163,16 @@ const Experience = () => {
   return (
     <section className="col-lg-3">
       <div className="mt-4 comm-story light-purple">
-        <div className="comm-story-image rounded-3 shadow-sm border">
+        <div className="comm-story-image rounded shadow-sm border">
           <Image />
         </div>
-        <Title />
+        <div className="text-center comm-story-p">
+          <Title />
+        </div>
         <div className="d-flex justify-content-between align-items-start">
-          <Author />
+          <p className="comm-story-auth deep-purple">
+            <FeaturedAuthor />
+          </p>
           <div className="line"></div>
         </div>
       </div>
@@ -177,23 +183,24 @@ const Experience = () => {
 const Topic = () => {
   return (
     <div className="col-lg-3">
-      <Image />
-      <TopicName />
-      <FollowButton />
+      <div className="podcaster mb-4">
+        <Image />
+
+        <TopicName />
+        <FollowButton />
+      </div>
     </div>
   );
 };
 
 const TopicName = () => (
-  <h3 className="px-3 py-2 font-weight-bold">
+  <h3 className="px-3 py-2 fw-bold color-red light-purple topic-name">
     Fashion <br />& Branding
   </h3>
 );
 
 const FollowButton = () => (
-  <button className="text-white px-4 font-weight-bold btn btn-primary">
-    Follow
-  </button>
+  <p className="play fw-bold bg-red text-white px-4 shadow">Follow</p>
 );
 
 const Image = () => (
@@ -207,6 +214,13 @@ const Title = () => (
   <div>How I managed to handle a cheating Husband for 3 years</div>
 );
 
-const Author = () => <small className="text-muted">Anna Rose</small>;
+const Author = () => <span className="text-muted">Anna Rose</span>;
+
+const FeaturedAuthor = () => (
+  <span className="">
+    Anna <br />
+    Rose
+  </span>
+);
 
 ReactDOM.render(<Tuwaaye />, document.getElementById("root"));
