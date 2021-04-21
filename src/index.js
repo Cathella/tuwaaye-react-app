@@ -50,13 +50,13 @@ const Welcome = () => {
         <div className="mt-5">
           <a
             href="#"
-            className="text-center d-block shadow text-white font-weight-bold shadow bg-primary py-3 rounded"
+            className="text-center d-block shadow text-white font-weight-bold shadow bg-purple py-3 rounded-pill"
           >
             Join our community
           </a>
           <a
             href="#"
-            className="mt-3 d-block text-white border text-center py-3 font-weight-bold rounded"
+            className="mt-3 d-block text-white border text-center py-3 font-weight-bold rounded-pill"
           >
             Login
           </a>
@@ -68,7 +68,7 @@ const Welcome = () => {
 
 const TopStories = () => {
   return (
-    <section className="col-lg-6 mx-auto">
+    <section className="col-lg-7 mx-auto">
       <HomeNav />
       <div className="row">
         <TopStory />
@@ -126,10 +126,12 @@ const Footer = () => {
 const HomeNav = () => {
   return (
     <nav className="d-flex my-5 align-items-center justify-content-between">
-      <a href="#" className="font-weight-bold fs-3 logo">
-        #Tuwaaye
-      </a>
-      <span className="mx-5 font-weight-bold bg-primary text-white px-4 rounded">
+      <div className="logo d-none d-lg-block">
+        <a href="#" className="fs-3 deep-purple">
+          #Tuwaaye
+        </a>
+      </div>
+      <span className="font-weight-bold rounded bg-red text-white px-4 rounded">
         Top Stories
       </span>
     </nav>
@@ -139,11 +141,14 @@ const HomeNav = () => {
 const TopStory = () => {
   return (
     <div className="col-lg-6">
-      <div className="row mb-4">
-        <div className="col-lg-3">
-          <Image />
+      <div className="row mb-4 mt-2">
+        <div className="col-lg-4">
+          <div className="image-prof">
+            <Image />
+            <p className="numbered bg-purple fw-bold text-white">1</p>
+          </div>
         </div>
-        <div className="col-lg-9">
+        <div className="col-lg-8">
           <Title />
           <Author />
         </div>
@@ -155,8 +160,8 @@ const TopStory = () => {
 const Experience = () => {
   return (
     <section className="col-lg-3">
-      <div className="mt-4">
-        <div className="bg-light rounded shadow mb-4">
+      <div className="mt-4 comm-story light-purple">
+        <div className="comm-story-image rounded-3 shadow-sm border">
           <Image />
         </div>
         <Title />
@@ -199,9 +204,9 @@ const Image = () => (
 );
 
 const Title = () => (
-  <p>How I managed to handle a cheating Husband for 3 years</p>
+  <div>How I managed to handle a cheating Husband for 3 years</div>
 );
 
-const Author = () => <p>Anna Rose</p>;
+const Author = () => <small className="text-muted">Anna Rose</small>;
 
 ReactDOM.render(<Tuwaaye />, document.getElementById("root"));

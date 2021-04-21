@@ -14,7 +14,7 @@ h2 {
 }
 
 h1 {
-  font-size: 3.5em;
+  font-size: 3.2em;
 }
 
 h2 {
@@ -32,4 +32,74 @@ h2 {
   background: #4645a8;
   color: white;
   padding: 7.5em 4em 5em;
+}
+
+.image-prof {
+  height: 85px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 6px 40px 0 rgba(0, 0, 0, 0.1);
+  margin: 0 1em 0 0;
+  border-radius: 0.25rem;
+}
+
+.image-prof img {
+  width: 100%;
+  height: auto;
+}
+
+.numbered {
+  position: absolute;
+  bottom: -1em;
+  left: 0;
+  box-shadow: 0 4px 10px 0 rgba(0, 0, 0, 0.1), 0 6px 40px 0 rgba(0, 0, 0, 0.1);
+  text-align: center;
+  width: 1.6em;
+  border-radius: 0 0.25rem 0 0.25rem;
+}
+
+.deep-purple {
+  color: #4645a8;
+}
+
+.bg-deep-purple {
+  background: #4645a8;
+}
+
+.light-purple {
+  background: #fbf5ff;
+}
+
+.color-red {
+  color: #ff0066;
+}
+
+.bg-purple {
+  background: #cb7ab3;
+}
+
+.color-purple {
+  color: #cb7ab3;
+}
+
+.bg-red {
+  background: #ff0066;
+}
+
+.rounded-pill {
+  border-radius: 50rem !important;
+}
+
+.comm-story {
+  margin: 2em 0 0 0;
+  padding: 3em 2em 0 2em;
+  height: 23em;
+}
+
+.comm-story-image {
+  height: 100px;
+  width: 100px;
+  overflow: hidden;
+  margin: 0 auto 1.6em auto;
 }
