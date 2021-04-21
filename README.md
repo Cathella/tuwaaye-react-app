@@ -2,4 +2,4 @@
 
 ### React-love
 
-> Recreating my tuwaaye app in React.
+> Recreating Tuwaaye social app in React.

@@ -1,6 +1,8 @@
 import "bootstrap/dist/css/bootstrap.css";
 import React from "react";
 import ReactDOM from "react-dom";
+// CSS
+import "./index.css";
 
 function Tuwaaye() {
   return (
@@ -28,27 +30,37 @@ const Header = () => {
 
 const Welcome = () => {
   return (
-    <section className="col-lg-5 bg-info p-5">
-      <h1 className="mt-4 mb-5 text-white font-weight-bold">
-        Share Your Experiences with the World
-      </h1>
-      <p className="text-white">
-        Let us be your voice. Reachout to millions of people that are waiting to
-        go through experiences with you.
-      </p>
-      <div className="mt-5">
-        <a
-          href="#"
-          className="text-center d-block shadow text-white font-weight-bold shadow bg-primary py-3 rounded"
-        >
-          Join our community
-        </a>
-        <a
-          href="#"
-          className="mt-3 d-block text-white border text-center py-3 font-weight-bold rounded"
-        >
-          Login
-        </a>
+    <section className="col-lg-5">
+      <div className="signup-section">
+        <div className="logo mb-5 d-lg-none d-md-block">
+          <a href="/" className="color-purple logo">
+            #Tuwaaye
+          </a>
+        </div>
+
+        <h1 className="mt-4 mb-5 font-weight-bold">
+          Share Your Experiences with the World
+        </h1>
+
+        <p className="d-none d-lg-block">
+          Let us be your voice. Reachout to millions of people that are waiting
+          to go through experiences with you.
+        </p>
+
+        <div className="mt-5">
+          <a
+            href="#"
+            className="text-center d-block shadow text-white font-weight-bold shadow bg-primary py-3 rounded"
+          >
+            Join our community
+          </a>
+          <a
+            href="#"
+            className="mt-3 d-block text-white border text-center py-3 font-weight-bold rounded"
+          >
+            Login
+          </a>
+        </div>
       </div>
     </section>
   );
@@ -114,7 +126,7 @@ const Footer = () => {
 const HomeNav = () => {
   return (
     <nav className="d-flex my-5 align-items-center justify-content-between">
-      <a href="#" className="font-weight-bold fs-3">
+      <a href="#" className="font-weight-bold fs-3 logo">
         #Tuwaaye
       </a>
       <span className="mx-5 font-weight-bold bg-primary text-white px-4 rounded">
