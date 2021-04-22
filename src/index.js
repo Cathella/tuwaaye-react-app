@@ -31,7 +31,7 @@ const topics = [
     id: 4,
     img:
       "https://intense-reaches-16629.herokuapp.com/assets/audrey-m-jackson-cAFpd2vqnPE-unsplash-6e054455f0dbb703692f0ed5509c246fb4284c7c67d99a893e1026489f903c07.jpg",
-    name: "Life & Family",
+    name: "LifeStyle & Family",
   },
 ];
 
@@ -133,7 +133,7 @@ const stories = [
     id: 8,
     img:
       "https://intense-reaches-16629.herokuapp.com/assets/audrey-m-jackson-cAFpd2vqnPE-unsplash-6e054455f0dbb703692f0ed5509c246fb4284c7c67d99a893e1026489f903c07.jpg",
-    title: "However challenging it seemed, I made it to Graduaction.",
+    title: "However challenging it was, I made it to Graduation.",
     author: "Martina Kalembe",
   },
 ];
@@ -151,7 +151,7 @@ function Tuwaaye() {
 
 const Header = () => {
   return (
-    <header>
+    <header className="light-purple">
       <div className="container">
         <div className="row">
           <Welcome />
@@ -164,7 +164,7 @@ const Header = () => {
 
 const Welcome = () => {
   return (
-    <section className="col-lg-5">
+    <section className="col-lg-6 col-xl-5">
       <div className="signup-section">
         <div className="logo mb-5 d-lg-none d-md-block">
           <a href="/" className="color-purple logo">
@@ -200,9 +200,24 @@ const Welcome = () => {
   );
 };
 
+const HomeNav = () => {
+  return (
+    <nav className="d-flex my-5 align-items-center justify-content-between">
+      <div className="logo d-none d-lg-block">
+        <a href="#" className="fs-3 deep-purple">
+          #Tuwaaye
+        </a>
+      </div>
+      <span className="font-weight-bold rounded bg-red text-white px-4 rounded">
+        Top Stories
+      </span>
+    </nav>
+  );
+};
+
 const TopStories = () => {
   return (
-    <section className="col-lg-7 mx-auto">
+    <section className="col-lg-5 col-xl-7 mx-auto">
       <HomeNav />
       <div className="row">
         {stories.map((story, index) => {
@@ -215,15 +230,15 @@ const TopStories = () => {
 
 const TopStory = ({ img, title, author, id }) => {
   return (
-    <div className="col-lg-6">
+    <div className="col-md-6 col-lg-11 col-xl-6">
       <div className="row mb-4 mt-2">
-        <div className="col-lg-4">
+        <div className="mb-3 col-3 col-sm-3 col-md-4 col-lg-4">
           <div className="image-prof">
             <img src={img} alt="" />
             <p className="numbered bg-purple fw-bold text-white">{id}</p>
           </div>
         </div>
-        <div className="col-lg-8">
+        <div className="col-sm-8 col-md-10 col-lg-8">
           <div className="mb-2">{title}</div>
           <span className="text-muted">{author}</span>
         </div>
@@ -249,8 +264,8 @@ const FeaturedExperiences = () => {
 
 const Experience = ({ img, title, author }) => {
   return (
-    <section className="col-lg-3">
-      <div className="mt-4 comm-story light-purple">
+    <section className="col-md-6 col-lg-4 col-xl-3">
+      <div className="my-4 comm-story light-purple">
         <div className="comm-story-image rounded shadow-sm border">
           <img src={img} alt="" />
         </div>
@@ -281,7 +296,7 @@ const Topics = () => {
 
 const Topic = ({ img, name }) => {
   return (
-    <div className="col-lg-3">
+    <div className="col-md-6 col-lg-4 col-xl-3">
       <div className="podcaster mb-4">
         <img src={img} alt="" />
         <h3 className="px-3 py-2 fw-bold color-red light-purple topic-name w-75">
@@ -293,6 +308,10 @@ const Topic = ({ img, name }) => {
   );
 };
 
+const FollowButton = () => (
+  <p className="play fw-bold bg-red text-white px-4 shadow">Follow</p>
+);
+
 const Footer = () => {
   return (
     <section className="mt-5 py-4 bg-deep-purple">
@@ -303,50 +322,5 @@ const Footer = () => {
     </section>
   );
 };
-
-const HomeNav = () => {
-  return (
-    <nav className="d-flex my-5 align-items-center justify-content-between">
-      <div className="logo d-none d-lg-block">
-        <a href="#" className="fs-3 deep-purple">
-          #Tuwaaye
-        </a>
-      </div>
-      <span className="font-weight-bold rounded bg-red text-white px-4 rounded">
-        Top Stories
-      </span>
-    </nav>
-  );
-};
-
-const TopicName = () => (
-  <h3 className="px-3 py-2 fw-bold color-red light-purple topic-name">
-    Fashion <br />& Branding
-  </h3>
-);
-
-const FollowButton = () => (
-  <p className="play fw-bold bg-red text-white px-4 shadow">Follow</p>
-);
-
-const Image = () => (
-  <img
-    src="https://intense-reaches-16629.herokuapp.com/assets/joanna-nix-walkup-V9QIep1zZJI-unsplash-213dbfa876f61c0b9cb878406e9dc8f7edd49d0b158b910af8adf223f1dbdd77.jpg"
-    alt=""
-  />
-);
-
-const Title = () => (
-  <div>How I managed to handle a cheating Husband for 3 years</div>
-);
-
-const Author = () => <span className="text-muted">Anna Rose</span>;
-
-const FeaturedAuthor = () => (
-  <span className="">
-    Anna <br />
-    Rose
-  </span>
-);
 
 ReactDOM.render(<Tuwaaye />, document.getElementById("root"));
