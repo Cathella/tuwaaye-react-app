@@ -1,6 +1,5 @@
 # Tuwaaye.
 
-### React-love
+> Creating Tuwaaye social app in React.
 
-> Recreating Tuwaaye social app in React.
-> [Live project link](https://tuwaaye-react-app.netlify.app/)
+- [Live project link](https://tuwaaye-react-app.netlify.app/)
