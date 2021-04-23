@@ -11,7 +11,7 @@ const Experience = ({ img, title, author }) => {
           <div>{title}</div>
         </div>
         <div className="d-flex justify-content-between align-items-start">
-          <p className="comm-story-auth deep-purple">{author}</p>
+          <p className="comm-story-auth text-muted">{author}</p>
           <div className="line"></div>
         </div>
       </div>

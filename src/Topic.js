@@ -15,11 +15,11 @@ const Topic = ({ img, name }) => {
     <div className="col-md-6 col-lg-4 col-xl-3">
       <div className="podcaster mb-4">
         <img src={img} alt="" />
-        <h3 className="px-3 py-2 fw-bold color-red light-purple topic-name w-75">
+        <h3 className="px-3 py-2 font-weight-bold color-red bg-white topic-name w-75">
           {name}
         </h3>
         <p
-          className="play font-weight-bold bg-red text-white px-4 shadow"
+          className="play font-weight-bold bg-purple text-white px-4 shadow"
           onClick={handleClick}
         >
           {text}
